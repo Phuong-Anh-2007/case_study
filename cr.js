@@ -84,12 +84,20 @@ class GameBoard {
             this.check(x,y);
             if(this.turn === O) {
                 this.turn = X;
-                document.getElementById('XX').style.borderColor='#33CC33';
-                document.getElementById('OO').style.borderColor='transparent';
+                    if (this.over) {
+                        document.getElementById('OO').style.borderColor='transparent';
+                    } else {
+                        document.getElementById('XX').style.borderColor='#33CC33';
+                        document.getElementById('OO').style.borderColor='transparent';
+                    }
             } else {
                 this.turn = O;
-                document.getElementById('OO').style.borderColor='#33CC33';
-                document.getElementById('XX').style.borderColor='transparent';
+                if (this.over) {
+                    document.getElementById('XX').style.borderColor='transparent';
+                } else {
+                    document.getElementById('OO').style.borderColor='#33CC33';
+                    document.getElementById('XX').style.borderColor='transparent';
+                }
             }
         } else {
             alert('Cell is not empty 😥');
@@ -172,12 +180,12 @@ class GameBoard {
             this.over = true;
             if (this.turn == X) {
                 countX++;
-                alert('Conragulation ❌!! You won');
-                document.getElementById('caro').innerHTML=countX;
+                document.getElementById('caro').innerHTML='Conragulation ❌!! You won';
+                document.getElementById('X').innerHTML=countX;
             } else {
                 countO++;
-                alert('Conragulation ⭕!! You won');
-                document.getElementById('caro').innerHTML=countO;
+                document.getElementById('caro').innerHTML='Conragulation ⭕!! You won';
+                document.getElementById('O').innerHTML=countO;
             }
         }
     }

@@ -30,7 +30,7 @@ function conti() {
 }
 
 function inpReset(id) {
-    document.getElementById(id).style.color='red';
+    document.getElementById(id).style.color='#CC00FF';
 }
 
 function outReset(id) {
