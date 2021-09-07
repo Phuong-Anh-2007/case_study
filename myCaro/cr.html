@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caro game</title>
+    <link rel="stylesheet" href="cr.css">
+</head>
+<body>
+    <div id="x_GameBoard_O">
+        <div id="XX">❌ <hr><p id="X"></p></div>
+        <div id="caro"></div>
+        <div id="OO">⭕ <hr><p id="O"></p></div>
+        <h2 onclick="reset()" id="reset" onmouseout="outReset('reset')" onmouseover="inpReset('reset')">Reset 😥</h2>
+        <h2 onclick="conti()" id="conti" onmouseout="outReset('conti')" onmouseover="inpReset('conti')">Continue 😊</h2>
+    </div>
+    
+</body>
+</html>
+<script src="cr.js"></script>
+<script src="function.js"></script>
