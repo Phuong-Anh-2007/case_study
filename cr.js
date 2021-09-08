@@ -6,6 +6,7 @@ const ROWS = 10;
 const CELL_SIZE = 55;
 let countX = 0;
 let countO = 0;
+let countWin;
 
 class Cell {
     constructor(x,y){
@@ -180,11 +181,14 @@ class GameBoard {
             this.over = true;
             if (this.turn == X) {
                 countX++;
-                win('❌','X',countX);
+                countWin=countX;
+                win('❌');
             } else {
                 countO++;
-                win('⭕','X',countX);
+                countWin=countO;
+                win('⭕');
             }
+            
         }
     }
 }
