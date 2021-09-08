@@ -26,8 +26,8 @@ class Cell {
                             +'top: '+ top +'px;'
                             +'left: '+ left +'px;'
                             +'line-height: '+ CELL_SIZE +'px;"'
-                            +'onmouseover = "inp('+this.x+','+this.y+')"'
-                            +'onmouseout = "out('+this.x+','+this.y+')"'
+                            +'onmouseover = "changeColorCellInp('+this.x+','+this.y+')"'
+                            +'onmouseout = "changeColorCellOut('+this.x+','+this.y+')"'
                             +'></div>';
         return cellHTML;
     }
@@ -87,7 +87,7 @@ class GameBoard {
                     if (this.over) {
                         document.getElementById('OO').style.borderColor='transparent';
                     } else {
-                        document.getElementById('XX').style.borderColor='#33CC33';
+                        document.getElementById('XX').style.borderColor='blue';
                         document.getElementById('OO').style.borderColor='transparent';
                     }
             } else {
@@ -95,7 +95,7 @@ class GameBoard {
                 if (this.over) {
                     document.getElementById('XX').style.borderColor='transparent';
                 } else {
-                    document.getElementById('OO').style.borderColor='#33CC33';
+                    document.getElementById('OO').style.borderColor='blue';
                     document.getElementById('XX').style.borderColor='transparent';
                 }
             }
@@ -180,8 +180,9 @@ class GameBoard {
             this.over = true;
             if (this.turn == X) {
                 countX++;
-                document.getElementById('caro').innerHTML='Conragulation ❌!! You won';
-                document.getElementById('X').innerHTML=countX;
+                // document.getElementById('caro').innerHTML='Conragulation ❌!! You won';
+                // document.getElementById('X').innerHTML=countX;
+                win('❌','X',countX);
             } else {
                 countO++;
                 document.getElementById('caro').innerHTML='Conragulation ⭕!! You won';
