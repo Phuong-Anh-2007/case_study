@@ -3,15 +3,20 @@ function play(x,y) {
 }
 
 function reset() {
+    let X = document.getElementById('XX');
+    let O = document.getElementById('OO');
     countX = 0;
     countO = 0;
     gameBoard = new GameBoard(ROWS, COLS, "caro");
     gameBoard.draw();
 
+    X.style.borderColor='blue ';
+    X.innerHTML='❌ <hr><p id="X"></p>';
+    O.style.borderColor='transparent';
+    O.innerHTML='⭕ <hr><p id="O"></p>';
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
-    document.getElementById('XX').style.borderColor='blue ';
-    document.getElementById('OO').style.borderColor='transparent';
+
     document.getElementById('reset').innerHTML='';
     document.getElementById('conti').innerHTML='';
 }
@@ -25,18 +30,25 @@ function changeColorCellOut(x,y) {
 }
 
 function conti(id,variable) {
+    let X = document.getElementById('XX');
+    let O = document.getElementById('OO');
     gameBoard = new GameBoard(ROWS, COLS, "caro");
     gameBoard.draw();
-    
-    document.getElementById('XX').style.borderColor='blue ';
-    document.getElementById('OO').style.borderColor='transparent';
+
+    X.style.borderColor='blue ';
+    X.innerHTML='❌ <hr><p id="X"></p>';
+    O.style.borderColor='transparent';
+    O.innerHTML='⭕ <hr><p id="O"></p>';
+    document.getElementById('X').innerHTML=countX;
+    document.getElementById('O').innerHTML=countO;
+
     document.getElementById(id).innerHTML=variable;
     document.getElementById('reset').innerHTML='';
     document.getElementById('conti').innerHTML='';
 }
 
 function inpReset(id) {
-    document.getElementById(id).style.color='#33CC33';
+    document.getElementById(id).style.color='lightgreen';
 }
 
 function outReset(id) {
@@ -45,15 +57,35 @@ function outReset(id) {
 
 function win(XO) {
     let show = document.getElementById('caro');
+    let rs = document.getElementById('btReset');
+    let ct = document.getElementById('btConti');
+
     show.innerHTML='Congarulation '+XO+'!! You win';
-    show.style.color='white';
+    show.style.color='yellow';
+    show.style.fontSize='60px';
+    show.style.marginTop='150px';
+    show.style.marginLeft='-50px';
+    show.style.fontWeight='bold';
 
     
-    document.getElementById('reset').innerHTML='Reset 😥';
-    document.getElementById('conti').innerHTML='Continue 😊';
+    rs.innerHTML='Reset 😥';
+    // rs.style.backgroundColor='black';
+    // rs.style.marginTop='250px';
+    // rs.style.textAlign='center';
+    rs.style.width='100%';
+    rs.style.color='white';
+
+    ct.innerHTML='Continue 😊';
+    ct.style.marginTop='250px'; 
+
     document.getElementById('XX').innerHTML='';
+    document.getElementById('XX').style.backgroundColor='transparent';
     document.getElementById('OO').innerHTML='';
+    document.getElementById('OO').style.backgroundColor='transparent';
+    
+
 }
 
 let gameBoard; 
-reset();
+// reset();
+win('❌');
