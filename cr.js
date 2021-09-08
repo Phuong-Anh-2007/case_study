@@ -180,13 +180,10 @@ class GameBoard {
             this.over = true;
             if (this.turn == X) {
                 countX++;
-                // document.getElementById('caro').innerHTML='Conragulation ❌!! You won';
-                // document.getElementById('X').innerHTML=countX;
                 win('❌','X',countX);
             } else {
                 countO++;
-                document.getElementById('caro').innerHTML='Conragulation ⭕!! You won';
-                document.getElementById('O').innerHTML=countO;
+                win('⭕','X',countX);
             }
         }
     }
