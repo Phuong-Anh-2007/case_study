@@ -36,8 +36,10 @@ function conti(id,variable) {
     gameBoard.draw();
 
     X.style.borderColor='#33CC33 ';
+    X.style.backgroundColor='rgba(255, 250, 250,0.75)';
     X.innerHTML='❌ <hr><p id="X"></p>';
     O.style.borderColor='transparent';
+    O.style.backgroundColor='rgba(255, 250, 250,0.75)';
     O.innerHTML='⭕ <hr><p id="O"></p>';
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
@@ -48,13 +50,36 @@ function conti(id,variable) {
 }
 
 function inpReset(id1,id2) {
+    let bar = document.getElementById(id2);
+    // let width = 0;
+    // let id=setInterval(startRunning,0.01);
+    //     function startRunning() {
+    //         if (width == 255) {
+    //             clearInterval(id);
+    //         } else {
+    //             width ++;
+    //             bar.style.width = width +'px';
+    //         }
+    //     }
+    bar.style.animation= 'inp 1s  1';
     document.getElementById(id1).style.color='white';
-    document.getElementById(id2).style.backgroundColor='black';
+    bar.style.animationPlayState='running';
 }
 
 function outReset(id1,id2) {
+    let bar = document.getElementById(id2);
+    // let width = 255;
+    // let id = setInterval(startRunning,0.01);
+    //     function startRunning() {
+    //         if (width == 0) {
+    //             clearInterval(id);
+    //         } else {
+    //             width --;
+    //             bar.style.width = width +'px';
+    //         }
+    //     }
+    bar.style.animation= 'inp 1s 1';
     document.getElementById(id1).style.color='black';
-    document.getElementById(id2).style.backgroundColor='white';
 }
 
 function win(XO) {
@@ -62,7 +87,7 @@ function win(XO) {
     let rs = document.getElementById('btReset');
     let ct = document.getElementById('conti');
 
-    show.innerHTML='Congarulation '+XO+'!! You win';
+    show.innerHTML='Congratulation '+XO+'!! You win';
     show.style.color='yellow';
     show.style.fontSize='60px';
     show.style.marginTop='150px';
@@ -71,14 +96,7 @@ function win(XO) {
 
     
     rs.innerHTML='Reset 😥';
-    // rs.style.backgroundColor='black';
-    // rs.style.marginTop='250px';
-    // rs.style.textAlign='center';
-    // rs.style.width='100%';
-    // rs.style.color='white';
-
     ct.innerHTML='Continue 😊';
-    // ct.style.marginTop='250px'; 
 
     document.getElementById('XX').innerHTML='';
     document.getElementById('XX').style.backgroundColor='transparent';

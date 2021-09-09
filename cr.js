@@ -182,10 +182,12 @@ class GameBoard {
             if (this.turn == X) {
                 countX++;
                 countWin=countX;
+                let id = 'X';
                 win('❌');
             } else {
                 countO++;
                 countWin=countO;
+                let id = 'O';
                 win('⭕');
             }
             
