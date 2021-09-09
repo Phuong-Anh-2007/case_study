@@ -43,18 +43,20 @@ body {
     border: 10px solid transparent ;
 }
 
-#btReset {
-    text-align: center;
-    margin-left: -950px;
-    font-size: 50px;
-    margin-top: 450px;
+ #reset {
+    /* text-align: center; */
+    /* margin-left: -950px; */
+    /* font-size: 50px;
+    margin-top: 200px;
     border-radius: 10px;
     color: white;
-    cursor: pointer; 
-    opacity: 100%; 
+    cursor: pointer;  */
+    width: 100px;
+    height: 200px;
+    /* background-color: aqua; */
 }
-
-#btConti {
+/*
+#conti {
     text-align: center;
     margin-left: 975px;
     font-size: 50px;
@@ -63,7 +65,7 @@ body {
     color: white;
     cursor: pointer; 
     
-}
+} */
 
 p {
     margin-top: auto;
@@ -72,8 +74,4 @@ p {
 #x_GameBoard_O {
     margin-left: 25px;
     margin-top: 30px;
-}
-
-.win {
-    float: left;
 }

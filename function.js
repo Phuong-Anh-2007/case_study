@@ -57,8 +57,8 @@ function outReset(id) {
 
 function win(XO) {
     let show = document.getElementById('caro');
-    let rs = document.getElementById('btReset');
-    let ct = document.getElementById('btConti');
+    let rs = document.getElementById('reset');
+    let ct = document.getElementById('conti');
 
     show.innerHTML='Congarulation '+XO+'!! You win';
     show.style.color='yellow';
@@ -72,11 +72,11 @@ function win(XO) {
     // rs.style.backgroundColor='black';
     // rs.style.marginTop='250px';
     // rs.style.textAlign='center';
-    rs.style.width='100%';
-    rs.style.color='white';
+    // rs.style.width='100%';
+    // rs.style.color='white';
 
     ct.innerHTML='Continue 😊';
-    ct.style.marginTop='250px'; 
+    // ct.style.marginTop='250px'; 
 
     document.getElementById('XX').innerHTML='';
     document.getElementById('XX').style.backgroundColor='transparent';
