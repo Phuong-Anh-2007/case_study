@@ -10,7 +10,7 @@ function reset() {
     gameBoard = new GameBoard(ROWS, COLS, "caro");
     gameBoard.draw();
 
-    X.style.borderColor='blue ';
+    X.style.borderColor='#33CC33 ';
     X.innerHTML='❌ <hr><p id="X"></p>';
     O.style.borderColor='transparent';
     O.innerHTML='⭕ <hr><p id="O"></p>';
@@ -35,7 +35,7 @@ function conti(id,variable) {
     gameBoard = new GameBoard(ROWS, COLS, "caro");
     gameBoard.draw();
 
-    X.style.borderColor='blue ';
+    X.style.borderColor='#33CC33 ';
     X.innerHTML='❌ <hr><p id="X"></p>';
     O.style.borderColor='transparent';
     O.innerHTML='⭕ <hr><p id="O"></p>';
@@ -47,17 +47,19 @@ function conti(id,variable) {
     document.getElementById('conti').innerHTML='';
 }
 
-function inpReset(id) {
-    document.getElementById(id).style.color='lightgreen';
+function inpReset(id1,id2) {
+    document.getElementById(id1).style.color='white';
+    document.getElementById(id2).style.backgroundColor='black';
 }
 
-function outReset(id) {
-    document.getElementById(id).style.color='white';
+function outReset(id1,id2) {
+    document.getElementById(id1).style.color='black';
+    document.getElementById(id2).style.backgroundColor='white';
 }
 
 function win(XO) {
     let show = document.getElementById('caro');
-    let rs = document.getElementById('reset');
+    let rs = document.getElementById('btReset');
     let ct = document.getElementById('conti');
 
     show.innerHTML='Congarulation '+XO+'!! You win';

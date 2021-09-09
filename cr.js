@@ -88,7 +88,7 @@ class GameBoard {
                     if (this.over) {
                         document.getElementById('OO').style.borderColor='transparent';
                     } else {
-                        document.getElementById('XX').style.borderColor='blue';
+                        document.getElementById('XX').style.borderColor='#33CC33';
                         document.getElementById('OO').style.borderColor='transparent';
                     }
             } else {
@@ -96,7 +96,7 @@ class GameBoard {
                 if (this.over) {
                     document.getElementById('XX').style.borderColor='transparent';
                 } else {
-                    document.getElementById('OO').style.borderColor='blue';
+                    document.getElementById('OO').style.borderColor='#33CC33';
                     document.getElementById('XX').style.borderColor='transparent';
                 }
             }
