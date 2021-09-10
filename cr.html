@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="cr.css">
 </head>
 <body>
-    <div id="x_GameBoard_O">
-        <div id="XX">❌ <hr><p id="X"></p></div>
-        <div id="caro"></div>
-        <div id="OO">⭕ <hr><p id="O"></p></div>
-    </div>
+    <!-- <div id="win" style="background-color: aqua; width: 100%; height: 50px; float: left; margin-left: 100px;"></div> -->
+    <div class="all">
+        <div id="win"></div>
+        <div id="x_GameBoard_O">
+            
+            <!-- <br> -->
+            <div id="XX">❌ <hr><p id="X"></p></div>
+            <div id="caro"></div>
+            <div id="OO">⭕ <hr><p id="O"></p></div>
+        </div>
 
-    <div  id="reset" ><div id="barReset"></div></div>
-    <button id="btReset" onclick="reset()" onmouseout="outReset('btReset','barReset')" onmouseover="inpReset('btReset','barReset')"></button>
+        <div  id="reset" ><div id="barReset"></div></div>
+        <button id="btReset" onclick="reset()" onmouseout="outReset('btReset','barReset')" onmouseover="inpReset('btReset','barReset')"></button>
+    </div>
     <!-- <button id="btReset" onclick="reset()"></button> -->
-    <div id="conti"><div id="barConti"></div></div>
+    <!-- <div id="conti"><div id="barConti"></div></div> -->
     <!-- <button onclick="conti(id,countWin)" onmouseout="outReset('btConti','barConti')" onmouseover="inpReset('btConti','barConti')"></button> -->
 </body>
 </html>

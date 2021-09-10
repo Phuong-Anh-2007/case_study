@@ -21,6 +21,7 @@ function reset() {
     document.getElementById('conti').innerHTML='';
 }
 
+
 function changeColorCellInp(x,y) {
     document.getElementById('cell_'+x + ',' +y+'').style.backgroundColor='rgba(255,240,245,0.75)';
 }
@@ -28,6 +29,7 @@ function changeColorCellInp(x,y) {
 function changeColorCellOut(x,y) {
     document.getElementById('cell_'+x + ',' +y+'').style.backgroundColor='transparent';
 }
+
 
 function conti(id,variable) {
     let X = document.getElementById('XX');
@@ -83,29 +85,29 @@ function outReset(id1,id2) {
 }
 
 function win(XO) {
-    let show = document.getElementById('caro');
+    let show = document.getElementById('win');
     let rs = document.getElementById('btReset');
     let ct = document.getElementById('conti');
 
     show.innerHTML='Congratulation '+XO+'!! You win';
-    show.style.color='yellow';
-    show.style.fontSize='60px';
-    show.style.marginTop='150px';
-    show.style.marginLeft='-50px';
-    show.style.fontWeight='bold';
+    // show.style.color='yellow';
+    // show.style.fontSize='60px';
+    // // show.style.marginTop='150px';
+    // // show.style.marginLeft='-50px';
+    // show.style.fontWeight='bold';
 
     
     rs.innerHTML='Reset 😥';
     ct.innerHTML='Continue 😊';
 
-    document.getElementById('XX').innerHTML='';
-    document.getElementById('XX').style.backgroundColor='transparent';
-    document.getElementById('OO').innerHTML='';
-    document.getElementById('OO').style.backgroundColor='transparent';
+    // document.getElementById('XX').innerHTML='';
+    // document.getElementById('XX').style.backgroundColor='transparent';
+    // document.getElementById('OO').innerHTML='';
+    // document.getElementById('OO').style.backgroundColor='transparent';
     
 
 }
 
 let gameBoard; 
-// reset();
-win('❌');
+reset();
+// win('❌');
