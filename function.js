@@ -19,7 +19,8 @@ function reset() {
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
     document.getElementById('win').innerHTML='';
-    document.getElementById('conti').style.backgroundColor='transparent';
+
+    document.getElementById('conti').style.border='transparent';
     document.getElementById('conti').innerHTML='';
 }
 
@@ -40,17 +41,13 @@ function conti(id,variable) {
     gameBoard.draw();
 
     X.style.borderColor='#33CC33 ';
-    // X.style.backgroundColor='rgba(255, 250, 250,0.75)';
-    // X.innerHTML='❌ <hr><p id="X"></p>';
-    // O.style.borderColor='transparent';
-    // O.style.backgroundColor='rgba(255, 250, 250,0.75)';
-    // O.innerHTML='⭕ <hr><p id="O"></p>';
+
     document.getElementById('win').innerHTML='';
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
 
     document.getElementById(id).innerHTML=variable;
-    // document.getElementById('reset').innerHTML='';
+    document.getElementById('conti').style.border='transparent';
     document.getElementById('conti').innerHTML='';
 }
 
@@ -58,7 +55,9 @@ function conti(id,variable) {
 function win(XO) {
     let show = document.getElementById('win');
     show.innerHTML='Congratulation '+XO+'!! You win'; 
+
     document.getElementById('conti').innerHTML='Continue 😊';
+    document.getElementById('conti').style.border= '5px solid lightblue';
 }
 
 let gameBoard; 
