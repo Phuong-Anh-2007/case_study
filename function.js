@@ -17,8 +17,8 @@ function reset() {
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
 
-    document.getElementById('reset').innerHTML='';
-    document.getElementById('conti').innerHTML='';
+    // document.getElementById('reset').innerHTML='';
+    // document.getElementById('conti').innerHTML='';
 }
 
 
@@ -63,9 +63,8 @@ function inpReset(id1,id2) {
     //             bar.style.width = width +'px';
     //         }
     //     }
-    bar.style.animation= 'inp 1s  1';
+    bar.style.animation= 'inp 1s ';
     document.getElementById(id1).style.color='white';
-    bar.style.animationPlayState='running';
 }
 
 function outReset(id1,id2) {
@@ -80,8 +79,9 @@ function outReset(id1,id2) {
     //             bar.style.width = width +'px';
     //         }
     //     }
-    bar.style.animation= 'inp 1s 1';
+    bar.style.animation= 'out 1s ';
     document.getElementById(id1).style.color='black';
+    // document.documentElement.style.setProperty('--now',width);
 }
 
 function win(XO) {
@@ -97,8 +97,8 @@ function win(XO) {
     // show.style.fontWeight='bold';
 
     
-    rs.innerHTML='Reset 😥';
-    ct.innerHTML='Continue 😊';
+    // rs.innerHTML='Reset 😥';
+    // ct.innerHTML='Continue 😊';
 
     // document.getElementById('XX').innerHTML='';
     // document.getElementById('XX').style.backgroundColor='transparent';
