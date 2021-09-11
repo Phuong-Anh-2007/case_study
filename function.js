@@ -16,6 +16,7 @@ function reset() {
     O.innerHTML='⭕ <hr><p id="O"></p>';
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
+    document.getElementById('win').innerHTML='';
 
     // document.getElementById('reset').innerHTML='';
     // document.getElementById('conti').innerHTML='';
