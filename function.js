@@ -14,12 +14,13 @@ function reset() {
     X.innerHTML='❌ <hr><p id="X"></p>';
     O.style.borderColor='transparent';
     O.innerHTML='⭕ <hr><p id="O"></p>';
+
+
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
     document.getElementById('win').innerHTML='';
-
-    // document.getElementById('reset').innerHTML='';
-    // document.getElementById('conti').innerHTML='';
+    document.getElementById('conti').style.backgroundColor='transparent';
+    document.getElementById('conti').innerHTML='';
 }
 
 
@@ -39,76 +40,26 @@ function conti(id,variable) {
     gameBoard.draw();
 
     X.style.borderColor='#33CC33 ';
-    X.style.backgroundColor='rgba(255, 250, 250,0.75)';
-    X.innerHTML='❌ <hr><p id="X"></p>';
-    O.style.borderColor='transparent';
-    O.style.backgroundColor='rgba(255, 250, 250,0.75)';
-    O.innerHTML='⭕ <hr><p id="O"></p>';
+    // X.style.backgroundColor='rgba(255, 250, 250,0.75)';
+    // X.innerHTML='❌ <hr><p id="X"></p>';
+    // O.style.borderColor='transparent';
+    // O.style.backgroundColor='rgba(255, 250, 250,0.75)';
+    // O.innerHTML='⭕ <hr><p id="O"></p>';
+    document.getElementById('win').innerHTML='';
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
 
     document.getElementById(id).innerHTML=variable;
-    document.getElementById('reset').innerHTML='';
+    // document.getElementById('reset').innerHTML='';
     document.getElementById('conti').innerHTML='';
 }
 
-function inpReset(id1,id2) {
-    let bar = document.getElementById(id2);
-    // let width = 0;
-    // let id=setInterval(startRunning,0.01);
-    //     function startRunning() {
-    //         if (width == 255) {
-    //             clearInterval(id);
-    //         } else {
-    //             width ++;
-    //             bar.style.width = width +'px';
-    //         }
-    //     }
-    bar.style.animation= 'inp 1s ';
-    document.getElementById(id1).style.color='white';
-}
-
-function outReset(id1,id2) {
-    let bar = document.getElementById(id2);
-    // let width = 255;
-    // let id = setInterval(startRunning,0.01);
-    //     function startRunning() {
-    //         if (width == 0) {
-    //             clearInterval(id);
-    //         } else {
-    //             width --;
-    //             bar.style.width = width +'px';
-    //         }
-    //     }
-    bar.style.animation= 'out 1s ';
-    document.getElementById(id1).style.color='black';
-    // document.documentElement.style.setProperty('--now',width);
-}
 
 function win(XO) {
     let show = document.getElementById('win');
-    let rs = document.getElementById('btReset');
-    let ct = document.getElementById('conti');
-
-    show.innerHTML='Congratulation '+XO+'!! You win';
-    // show.style.color='yellow';
-    // show.style.fontSize='60px';
-    // // show.style.marginTop='150px';
-    // // show.style.marginLeft='-50px';
-    // show.style.fontWeight='bold';
-
-    
-    // rs.innerHTML='Reset 😥';
-    // ct.innerHTML='Continue 😊';
-
-    // document.getElementById('XX').innerHTML='';
-    // document.getElementById('XX').style.backgroundColor='transparent';
-    // document.getElementById('OO').innerHTML='';
-    // document.getElementById('OO').style.backgroundColor='transparent';
-    
-
+    show.innerHTML='Congratulation '+XO+'!! You win'; 
+    document.getElementById('conti').innerHTML='Continue 😊';
 }
 
 let gameBoard; 
 reset();
-// win('❌');
