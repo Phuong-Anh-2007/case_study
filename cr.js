@@ -6,7 +6,8 @@ const ROWS = 10;
 const CELL_SIZE = 55;
 let countX = 0;
 let countO = 0;
-let countWin;
+// let arr=[];
+// let countWin;
 
 class Cell {
     constructor(x,y){
@@ -75,14 +76,16 @@ class GameBoard {
     };
 
     play(x,y) {
+        let cell = this.cells[x][y]; 
         if (this.over) {
             return;
         }
-        let cell = this.cells[x][y];
+        
         if (cell.value === EMPTY) {
             cell.value=this.turn;
             cell.draw();
             this.check(x,y);
+
             if(this.turn === O) {
                 this.turn = X;
                     if (this.over) {
@@ -125,15 +128,21 @@ class GameBoard {
 
         //Dọc
         count = 1;
-         i =1;
-        while ((x + i < this.rows) && this.cells[x + i][y].value === cell.value) {
+        i =1;
+        while ((x + i < this.rows) && this.cells[x + i][y].value === cell.value) { //<
+            
             count++;
             i++;
+            // arr.push('cell_'+x + ',' +y+'');
+            // arr.push('cell_'+x-- + ',' +y--+'');
         }
-         i =1;
-        while ((x - i >= 0) && this.cells[x - i][y].value === cell.value) {
+        i =1;
+        while ((x - i >= 0) && this.cells[x - i][y].value === cell.value) { //>=
+            
             count++;
             i++;
+            // arr.push('cell_'+x + ',' +y+'');
+            // arr.push('cell_'+x-- + ',' +y--+'');
         }
         this.endGame(count);
 
@@ -181,16 +190,23 @@ class GameBoard {
             this.over = true;
             if (this.turn == X) {
                 countX++;
-                countWin=countX;
+                // countWin=countX;
                 let id = 'X';
                 win('❌');
             } else {
                 countO++;
-                countWin=countO;
+                // countWin=countO;
                 let id = 'O';
                 win('⭕');
             }
+            // for (let i=0; i<arr.length;i++) {
+            //     console.log(arr[i]);
+            //     document.getElementById(arr[i]).style.backgroundColor='red';
+            // }
+
             
         }
+
+        
     }
 }

@@ -34,9 +34,9 @@ function changeColorCellOut(x,y) {
 }
 
 
-function conti(id,variable) {
+function conti() {
     let X = document.getElementById('XX');
-    let O = document.getElementById('OO');
+    // let O = document.getElementById('OO');
     gameBoard = new GameBoard(ROWS, COLS, "caro");
     gameBoard.draw();
 
@@ -46,7 +46,6 @@ function conti(id,variable) {
     document.getElementById('X').innerHTML=countX;
     document.getElementById('O').innerHTML=countO;
 
-    document.getElementById(id).innerHTML=variable;
     document.getElementById('conti').style.border='transparent';
     document.getElementById('conti').innerHTML='';
 }
@@ -54,10 +53,12 @@ function conti(id,variable) {
 
 function win(XO) {
     let show = document.getElementById('win');
+    let conti = document.getElementById('conti');
     show.innerHTML='Congratulation '+XO+'!! You win'; 
 
-    document.getElementById('conti').innerHTML='Continue 😊';
-    document.getElementById('conti').style.border= '5px solid lightblue';
+    conti.innerHTML='Continue 😊';
+    conti.style.border= '5px solid lightblue';
+
 }
 
 let gameBoard; 
