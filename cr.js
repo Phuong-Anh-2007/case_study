@@ -8,6 +8,11 @@ let countX = 0;
 let countO = 0;
 // let arr=[];
 // let countWin;
+let audio = new Audio();
+let winSound = new Audio();
+
+audio.src='sounds/pop.mp3';
+winSound.src='sounds/win.mp3';
 
 class Cell {
     constructor(x,y){
@@ -39,9 +44,11 @@ class Cell {
         switch (this.value) {
             case X:
                 cellDiv.innerHTML='❌';
+                audio.play();
                 break;
             case O:
                 cellDiv.innerHTML='⭕';
+                audio.play();
                 break;
             default:
                 cellDiv.innerHTML='';
@@ -191,13 +198,13 @@ class GameBoard {
             if (this.turn == X) {
                 countX++;
                 // countWin=countX;
-                let id = 'X';
                 win('❌');
+                winSound.play();
             } else {
                 countO++;
                 // countWin=countO;
-                let id = 'O';
                 win('⭕');
+                winSound.play();
             }
             // for (let i=0; i<arr.length;i++) {
             //     console.log(arr[i]);

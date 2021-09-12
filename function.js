@@ -1,8 +1,13 @@
+let clickSound = new Audio();
+clickSound.src='sounds/click.mp3';
+
 function play(x,y) {
     gameBoard.play(x,y);
 }
 
 function reset() {
+    clickSound.play();
+    
     let X = document.getElementById('XX');
     let O = document.getElementById('OO');
     countX = 0;
@@ -35,6 +40,8 @@ function changeColorCellOut(x,y) {
 
 
 function conti() {
+    clickSound.play();
+
     let X = document.getElementById('XX');
     // let O = document.getElementById('OO');
     gameBoard = new GameBoard(ROWS, COLS, "caro");
