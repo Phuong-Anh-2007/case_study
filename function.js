@@ -1,4 +1,5 @@
 let clickSound = new Audio();
+// let music = true;
 clickSound.src='sounds/click.mp3';
 
 function play(x,y) {
@@ -68,5 +69,11 @@ function win(XO) {
 
 }
 
+function tie() {
+    let show = document.getElementById('win');
+    show.innerHTML='❌ Both of you\'re tie ⭕';
+}
+
 let gameBoard; 
 reset();
+
