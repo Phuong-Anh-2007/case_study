@@ -124,7 +124,7 @@ body {
     color: black;
 }
 
-p {
+#X, #O {
     margin-top: auto;
 }
 
@@ -190,20 +190,21 @@ p {
 #off::before {
     content: "";
     position: absolute;
-    top: 650px;
-    left: 10px;
-    right: 100%;
+    top: 200%;
+    left: 7px;
+    right: 1270px;
     bottom: -115px;
     background: white;
     transition: .4s;
     z-index: -1; 
+    border-radius: 10px;
 }
 
 
 
 #off:hover::before {
-    right: 25px;
-    border-radius: 10px;
+    top: 500px;
+    
 }
 
 /* #off:hover #onMusic {
