@@ -153,7 +153,7 @@ p {
     position: static;
     /* background-color: black; */
 }
-
+/* 
 #onMusic {
     width: 50px;
     height: 50px;
@@ -169,37 +169,43 @@ p {
     border-radius: 10px;
     position: relative;
     z-index: -1;
-}
+} */
 
 #off {
     width: 50px;
     height: 50px;
     margin-top: 150px;
-    margin-left: 100px; /*-70px; */
+    margin-left: 0px; /*-70px; */
     background-color: lightgray;
-    text-align: center;
+    /* text-align: center; */
     line-height: 50px;
     float: left;
     font-size: 30px;
     cursor: pointer;
     border: 10px solid lightgray;
     border-radius: 10px;
-    position: relative;
+    /* position: relative; */
 }
 
-/* .setting::before {
-    width: 50px;
-    height: 50px;;
-    margin-top: 150px;
-    margin-left: 0px;
-} */
-
-
-
-/* .setting:hover {
-    width: 100px;
+#off::before {
+    content: "";
+    position: absolute;
+    top: 650px;
+    left: 10px;
+    right: 100%;
+    bottom: -115px;
+    background: white;
+    transition: .4s;
+    z-index: -1; 
 }
 
-.setting:hover .music {
+
+
+#off:hover::before {
+    right: 25px;
+    border-radius: 10px;
+}
+
+/* #off:hover #onMusic {
     color: white;
 } */

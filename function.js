@@ -7,7 +7,7 @@ function play(x,y) {
 }
 
 function reset() {
-    clickSound.play();
+    // clickSound.play();
     
     let X = document.getElementById('XX');
     let O = document.getElementById('OO');

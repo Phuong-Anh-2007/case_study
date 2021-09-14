@@ -6,7 +6,8 @@ const ROWS = 10;
 const CELL_SIZE = 55;
 let countX = 0;
 let countO = 0;
-// let arr=[];
+let arr=[];
+let cc=0;
 // let countWin;
 let empty_cell = 0;
 let audio = new Audio();
@@ -148,19 +149,25 @@ class GameBoard {
         //Dọc
         count = 1;
         i =1;
+        cc++;
+        
+        
         while ((x + i < this.rows) && this.cells[x + i][y].value === cell.value) { 
             
             count++;
-            i++;
-            // arr.push('cell_'+x + ',' +y+'');
+            i++; 
+            arr.push('cell_'+x + ',' +y+'');
+            
+            
             // arr.push('cell_'+x-- + ',' +y--+'');
         }
         i =1;
+        
         while ((x - i >= 0) && this.cells[x - i][y].value === cell.value) { 
             
             count++;
             i++;
-            // arr.push('cell_'+x + ',' +y+'');
+            arr.push('cell_'+x + ',' +y+'');
             // arr.push('cell_'+x-- + ',' +y--+'');
         }
         this.endGame(count);
@@ -218,39 +225,62 @@ class GameBoard {
                 win('⭕');
                 winSound.play();
             }
+            let a, b, countN=0;
+        let c = arr[0];
+        console.log(c);
+        for (let i=0; i<c.length; i++) {
+            if (isNaN(c[i]) == false && countN==0) {
+                a=i;
+                countN++;
+            } else if (isNaN(c[i]) == false && countN==1) {
+                b=i;
+            }
+        }
+        console.log(a+','+b);
+        // document.getElementById('cell_'+a--+','+b--).style.backgroundColor='red';
+        document.getElementById(c).style.backgroundColor='red';
+
         } else if (empty_cell >= 100) {
             tie();
         }
+        for (let i=0; i<arr.length; i++) {
+            document.getElementById(arr[i]).style.backgroundColor='red';
+        }
+        
+        
     }
 }
 
-// function onMusic() {
-//     let on = document.getElementById('off');
-//     let off = document.getElementById('on');
-//     music = true;
-
-//     off.innerHTML='';
-//     off.style.backgroundColor='transparent';
-//     off.style.borderColor='transparent';
-
-//     on.innerHTML='🔊';
-//     on.style.backgroundColor='lightgray';
-//     on.style.borderColor='lightgray';
-// }
-
-// music('off','on',true,'🔊');
-
-function music(id1, id2,turn,img) {
-    let on = document.getElementById(id2);
-    let off = document.getElementById(id1);
-
-    on.innerHTML= img;
-    on.style.backgroundColor='lightgray';
-    on.style.borderColor='lightgray';
+function onMusic() {
+    let on = document.getElementById('off');
+    let off = document.getElementById('on');
+    music = true;
 
     off.innerHTML='';
     off.style.backgroundColor='transparent';
     off.style.borderColor='transparent';
 
+    on.innerHTML='🔊';
+    on.style.backgroundColor='lightgray';
+    on.style.borderColor='lightgray';
+}
+
+music('off','on',true,'🔊');
+
+function music(id1, turn) {
+    let on = document.getElementById(id1);
+    // let off = document.getElementById(id1);
+
+    // off.innerHTML='';
+    // off.style.backgroundColor='transparent';
+    // off.style.borderColor='transparent';
+    on.style.backgroundColor='lightgray';
+    on.style.borderColor='lightgray';
+
     turnMusic=turn;
+    if (turnMusic) {
+        on.innerHTML= '🔊';
+    } else {
+        on.innerHTML= '🔈';
+    }
 }
