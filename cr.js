@@ -239,7 +239,7 @@ function onMusic() {
     on.style.borderColor='lightgray';
 }
 
-music('off','on',true,'🔊');
+// music('off','on',true,'🔊');
 
 function music(id1, turn) {
     let on = document.getElementById(id1);
