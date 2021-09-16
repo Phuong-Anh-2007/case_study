@@ -1,13 +1,14 @@
 let clickSound = new Audio();
-// let music = true;
 clickSound.src='sounds/click.mp3';
+
 
 function play(x,y) {
     gameBoard.play(x,y);
 }
 
+//Reset game
 function reset() {
-    // clickSound.play();
+    clickSound.play();        
     
     let X = document.getElementById('XX');
     let O = document.getElementById('OO');
@@ -30,7 +31,7 @@ function reset() {
     document.getElementById('conti').innerHTML='';
 }
 
-
+//Change color of cell
 function changeColorCellInp(x,y) {
     document.getElementById('cell_'+x + ',' +y+'').style.backgroundColor='rgba(255,240,245,0.75)';
 }
@@ -39,7 +40,7 @@ function changeColorCellOut(x,y) {
     document.getElementById('cell_'+x + ',' +y+'').style.backgroundColor='transparent';
 }
 
-
+//Continue button
 function conti() {
     clickSound.play();
 
@@ -58,7 +59,7 @@ function conti() {
     document.getElementById('conti').innerHTML='';
 }
 
-
+//Win or tie
 function win(XO) {
     let show = document.getElementById('win');
     let conti = document.getElementById('conti');
@@ -76,4 +77,3 @@ function tie() {
 
 let gameBoard; 
 reset();
-

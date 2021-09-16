@@ -11,7 +11,6 @@ let countO = 0;
 let empty_cell = 0;
 let audio = new Audio();
 let winSound = new Audio();
-let turnMusic;
 
 audio.src='sounds/pop.mp3';
 winSound.src='sounds/win.mp3';
@@ -46,15 +45,15 @@ class Cell {
         switch (this.value) {
             case X:
                 cellDiv.innerHTML='❌';
-                if (music) {
+                // if (turnMusic) {
                     audio.play();    
-                }
+                // }
                 break;
             case O:
                 cellDiv.innerHTML='⭕';
-                if (music) {
+                // if (turnMusic) {
                     audio.play();    
-                }
+                // }
                 break;
             default:
                 cellDiv.innerHTML='';
@@ -212,12 +211,17 @@ class GameBoard {
                 countX++;
                 // countWin=countX;
                 win('❌');
-                winSound.play();
+                // if (turnMusic) {
+                    winSound.play();    
+                // }
+                
             } else {
                 countO++;
                 // countWin=countO;
                 win('⭕');
-                winSound.play();
+                // if (turnMusic) {
+                    winSound.play();    
+                // }
             }
         } else if (empty_cell >= 100) {
             tie();
@@ -225,36 +229,3 @@ class GameBoard {
     }
 }
 
-function onMusic() {
-    let on = document.getElementById('off');
-    let off = document.getElementById('on');
-    music = true;
-
-    off.innerHTML='';
-    off.style.backgroundColor='transparent';
-    off.style.borderColor='transparent';
-
-    on.innerHTML='🔊';
-    on.style.backgroundColor='lightgray';
-    on.style.borderColor='lightgray';
-}
-
-// music('off','on',true,'🔊');
-
-function music(id1, turn) {
-    let on = document.getElementById(id1);
-    // let off = document.getElementById(id1);
-
-    // off.innerHTML='';
-    // off.style.backgroundColor='transparent';
-    // off.style.borderColor='transparent';
-    on.style.backgroundColor='lightgray';
-    on.style.borderColor='lightgray';
-
-    turnMusic=turn;
-    if (turnMusic) {
-        on.innerHTML= '🔊';
-    } else {
-        on.innerHTML= '🔈';
-    }
-}

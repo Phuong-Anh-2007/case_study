@@ -68,7 +68,7 @@ body {
 
 #reset {
     text-align: center;
-    margin-left: 454px;                
+    margin-left: 525px;                
     margin-top:  150px;                
     border-radius: 10px;
     width: 250px;
@@ -171,57 +171,3 @@ body {
     z-index: -1;
 } */
 
-#off {
-    width: 50px;
-    height: 50px;
-    margin-top: 150px;
-    margin-left: 0px; /*-70px; */
-    background-color: lightgray;
-    /* text-align: center; */
-    line-height: 50px;
-    float: left;
-    font-size: 30px;
-    cursor: pointer;
-    border: 10px solid lightgray;
-    border-radius: 10px;
-    /* position: relative; */
-}
-
-#off::before {
-    content: "";
-    position: absolute;
-    top: 200%;
-    left: 7px;
-    right: 1270px;
-    bottom: -115px;
-    background: lightgray;
-    transition: .1s;
-    z-index: -1; 
-    border-radius: 10px;
-}
-
-
-
-#off:hover::before {
-    top: 600px;
-}
-
-#off:hover .turnMusic {
-    color: black;
-}
-
-.turnMusic {
-    /* background-color: aqua; */
-    float: left;
-    margin-top: -100px;
-    margin-left: -10px;
-    width: 70px;
-    position: absolute;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    color: transparent;
-    height: 150px;
-    font-size: 20px;
-    /* line-height: 150px; */
-    /* text-align: center; */
-}
