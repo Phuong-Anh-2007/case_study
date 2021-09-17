@@ -8,6 +8,7 @@ let countX = 0;
 let countO = 0;
 // let arr=[];
 // let countWin;
+let music;
 let empty_cell = 0;
 let audio = new Audio();
 let winSound = new Audio();
@@ -45,15 +46,15 @@ class Cell {
         switch (this.value) {
             case X:
                 cellDiv.innerHTML='❌';
-                // if (turnMusic) {
+                if (music) {
                     audio.play();    
-                // }
+                }
                 break;
             case O:
                 cellDiv.innerHTML='⭕';
-                // if (turnMusic) {
+                if (music) {
                     audio.play();    
-                // }
+                }
                 break;
             default:
                 cellDiv.innerHTML='';
@@ -207,12 +208,15 @@ class GameBoard {
     endGame(count) {
         if (count >= 5) {
             this.over = true;
+            if (music) {
+                winSound.play(); 
+            }
             if (this.turn == X) {
                 countX++;
                 // countWin=countX;
                 win('❌');
                 // if (turnMusic) {
-                    winSound.play();    
+                       
                 // }
                 
             } else {
@@ -220,7 +224,7 @@ class GameBoard {
                 // countWin=countO;
                 win('⭕');
                 // if (turnMusic) {
-                    winSound.play();    
+                    // winSound.play();    
                 // }
             }
         } else if (empty_cell >= 100) {
@@ -229,3 +233,6 @@ class GameBoard {
     }
 }
 
+function checkMusic(turn) {
+    music = turn;
+}

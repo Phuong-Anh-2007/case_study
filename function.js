@@ -8,7 +8,10 @@ function play(x,y) {
 
 //Reset game
 function reset() {
-    clickSound.play();        
+    if (music) {
+        clickSound.play();      
+    }
+          
     
     let X = document.getElementById('XX');
     let O = document.getElementById('OO');
@@ -42,7 +45,9 @@ function changeColorCellOut(x,y) {
 
 //Continue button
 function conti() {
-    clickSound.play();
+    if (music) {
+        clickSound.play();      
+    }
 
     let X = document.getElementById('XX');
     // let O = document.getElementById('OO');
