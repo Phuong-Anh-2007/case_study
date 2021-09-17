@@ -81,4 +81,6 @@ function tie() {
 }
 
 let gameBoard; 
+
 reset();
+checkMusic(true);

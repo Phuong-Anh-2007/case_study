@@ -13,22 +13,26 @@
     <div class="all">
         <div id="win"></div>
         <div class="x_GameBoard_O">
-            <!-- <br> -->
             <div id="XX">❌ <hr><p id="X"></p></div>
             <div id="caro"></div>
             <div id="OO">⭕ <hr><p id="O"></p></div>
         </div>
         <div class="turnMusic">
+            <!-- <form action=""> -->
             <table>
                 <tr>
                     <td>🔊</td>
-                    <td><input type="radio" name="music" id="onMusic" onclick="checkMusic(true)"></td>
+                    
+                    <td><input type="radio" name="music" id="onMusic" onclick="checkMusic(true)" checked></td>
+                    
                 </tr>
                 <tr>
                     <td>🔈</td>
                     <td><input type="radio" name="music" id="offMusic" onclick="checkMusic(false)"></td>
+                    
                 </tr>
             </table>
+            <!-- </form> -->
         </div>        
         <div  id="reset" onclick="reset()">Reset 😥</div>
         <div id="conti" onclick="conti()"></div>
