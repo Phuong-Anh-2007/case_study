@@ -9,13 +9,13 @@
     font-size: 50px;
     position: relative;
     color: white;
-    /* float: left; */
 }
 
 body {
     text-align: center; 
     background-image: url(img/backgroundInfor.jpg);
     background-size: 100%;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
 }
 
 .bar {
@@ -58,6 +58,7 @@ body {
     /* background-color: violet; */
     font-size: 50px;
     font-weight: bold;
+    
 }
 
 #play {
@@ -104,6 +105,7 @@ body {
     border-radius: 20px;
     cursor: pointer;
     border: 10px solid red;
+    color: red;
 }
 
 #instruc::before {
@@ -126,3 +128,9 @@ body {
 #instruc:hover {
     color: black;
 }
+
+/* @font-face {
+    font-family: MyFont;
+    src: local('Gluten'),
+        url(https://envato.com/elements/lp/fonts/?adposition=&msclkid=1d57d93acfed1341bce9b87f242f61fa&utm_source=bing&utm_medium=cpc&utm_campaign=elements_bing_en_3_b&utm_term=online%20fonts&utm_content=ee_fonts_b);
+} */
