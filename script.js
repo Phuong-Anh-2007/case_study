@@ -1,5 +1,3 @@
-let flag;
-
 function runBar() {
     let elem= document.getElementById('runBar');
     let width=0;
@@ -15,11 +13,20 @@ function runBar() {
         }
     }
 }
-runBar();
+// runBar();
+changeAll();
 
 function changeAll() {
     let elem = document.getElementById('change');
-    elem.innerHTML='❌ CARO GAME ⭕'
-                    +'<div id="play">Play</div>'
-                    +'<div id="intruc">Intruction</div>';
+    elem.innerHTML='<div class="changed">'
+                    +'<b style="color:white">❌ CARO GAME ⭕</b>'
+                    +'<div><br></div>'
+                    +'<div id="play" onclick="goToPlay()">PLAY</div>'
+                    +'<br>'
+                    +'<div id="instruc">INSTRUCTION</div>'
+                    +'</div>';
+}
+
+function goToPlay() {
+    window.location='cr.html';
 }

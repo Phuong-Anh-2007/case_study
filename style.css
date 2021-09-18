@@ -52,3 +52,77 @@ body {
     color: white;
     font-size: 20px;
 }
+
+.changed {
+    margin-top: 100px;
+    /* background-color: violet; */
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#play {
+    width: 250px;
+    height: 100px;
+    background-color: transparent;
+    line-height: 100px;
+    margin-left: 550px;
+    font-size:30px;
+    border-radius: 20px;
+    cursor: pointer;
+    border:10px solid tomato;
+    color: tomato;
+}
+
+#play::before {
+    content: "";
+    position: absolute;
+    top: 225px;
+    left: 560px;
+    right: 100%;
+    bottom: 315px;
+    background: tomato;
+    transition: .4s;
+    z-index: -1; 
+}
+
+#play:hover::before{
+    right: 540px;
+    border-radius: 20px;
+}
+
+#play:hover {
+    color: black;
+}
+
+#instruc {
+    width: 250px;
+    height: 100px;
+    background-color: transparent;
+    line-height: 100px;
+    margin-left: 550px;
+    font-size:30px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 10px solid red;
+}
+
+#instruc::before {
+    content: "";
+    position: absolute;
+    top: 410px;
+    left: 560px;
+    right: 100%;
+    bottom: 140px;
+    background: red;
+    transition: .4s;
+    z-index: -1; 
+}
+
+#instruc:hover::before {
+    right: 540px;
+    border-radius: 20px;
+}
+
+#instruc:hover {
+    color: black;
+}
