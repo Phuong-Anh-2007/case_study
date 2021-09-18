@@ -1,13 +1,38 @@
-.video {
-    text-align: center;
-    /* line-height: 100%; */
-    margin-left: 400px;
+#introduction {
+    width: 100%px;
+    /* background-color: green; */
+    margin-left: auto;
     margin-right: auto;
-    float: left;
+    /* height: 400%; */
     margin-top: 100px;
-
+    /* line-height: 100px; */
+    font-size: 30px;
+    position: relative;
 }
 
-.all {
-    text-align: center;
+body {
+    text-align: center; 
+    background-image: url(https://th.bing.com/th/id/OIP.H5KI7ISRb0JDW0Br3T1wYwHaEK?w=305&h=180&c=7&r=0&o=5&pid=1.7);
+    background-size: 100%;
 }
+
+#me {
+    /* background-color: salmon; */
+    height: 100px;
+    margin-bottom:0px;
+    margin-top: 225px;
+    line-height: 100px;
+}
+
+#game {
+    line-height: 100px;
+    /* background-color: salmon; */
+    height: 100px;
+    margin-top: 250px;
+    font-size: 30px;
+}
+
+@keyframes Blur {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+};
