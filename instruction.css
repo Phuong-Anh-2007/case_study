@@ -42,7 +42,9 @@ body {
     bottom: -10px;
     background: red;
     transition: .4s;
-    z-index: -2; 
+    z-index: -1; 
+    /* z-index:  Position elements; */
+    display: inline-block;
 }
 
 #play:hover:before {
