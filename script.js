@@ -13,8 +13,8 @@ function runBar() {
         }
     }
 }
-// runBar();
-changeAll();
+runBar();
+// changeAll();
 
 function changeAll() {
     let elem = document.getElementById('change');
@@ -23,10 +23,14 @@ function changeAll() {
                     +'<div><br></div>'
                     +'<div id="play" onclick="goToPlay()">PLAY</div>'
                     +'<br>'
-                    +'<div id="instruc">INSTRUCTION</div>'
+                    +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
                     +'</div>';
 }
 
 function goToPlay() {
     window.location='cr.html';
+}
+
+function goToInstruction() {
+    window.location='instruction.html';
 }

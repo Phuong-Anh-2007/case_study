@@ -1,0 +1,50 @@
+body {
+    background-image: url(https://th.bing.com/th/id/OIP.4xBfq5pS52fAptUjuIFeywHaEv?pid=ImgDet&rs=1);
+    background-size: 100%;
+    color: black;
+}
+
+.all {
+    background-color: rgba(245, 245, 245, 0.75);
+    font-size: 30px;
+    border-radius: 30px;
+    width: 50%;
+    height: 625px;
+    margin-top: 0px;
+    margin-left: 350px;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+}
+
+#play {
+    width: 275px;
+    height: 100px;
+    background-color: transparent;
+    line-height: 100px;
+    font-size:30px;
+    border-radius: 20px;
+    cursor: pointer;
+    border:10px solid tomato;
+    color: tomato;
+    text-align: center;
+    margin-left: 175px;
+}
+
+#play::before {
+    content: "";
+    position: absolute;
+    top: 550px;
+    left: 100%;
+    right: 530px;
+    bottom: -10px;
+    background: red;
+    transition: .4s;
+    z-index: -2; 
+}
+
+#play:hover:before {
+    left: 540px;
+}
