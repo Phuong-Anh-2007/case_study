@@ -2,6 +2,8 @@ function runBar() {
     let elem= document.getElementById('runBar');
     let width=0;
     let id = setInterval(run,50);
+    let flag;
+
     function run() {
         if (width == 100) {
             clearInterval(id);
@@ -12,6 +14,7 @@ function runBar() {
             document.getElementById('widthOfBar').innerHTML=width+'%'
         }
     }
+
 }
 runBar();
 // changeAll();
