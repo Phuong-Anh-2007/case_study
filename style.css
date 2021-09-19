@@ -8,12 +8,12 @@
     /* line-height: 100px; */
     font-size: 50px;
     position: relative;
-    color: white;
+    color: black;
 }
 
 body {
     text-align: center; 
-    background-image: url(img/backgroundInfor.jpg);
+    background-image: url(img/background.jpg);
     background-size: 100%;
     font-family: Verdana, 'Geneva', Tahoma, sans-serif;
 }
@@ -70,8 +70,8 @@ body {
     font-size:30px;
     border-radius: 20px;
     cursor: pointer;
-    border:10px solid tomato;
-    color: tomato;
+    border:10px solid black;
+    color: black;
 }
 
 #play::before {
@@ -81,7 +81,7 @@ body {
     left: 560px;
     right: 100%;
     bottom: 315px;
-    background: tomato;
+    background: black;
     transition: .4s;
     z-index: -1; 
 }
@@ -92,7 +92,7 @@ body {
 }
 
 #play:hover {
-    color: black;
+    color: white;
 }
 
 #instruc {
@@ -104,8 +104,8 @@ body {
     font-size:30px;
     border-radius: 20px;
     cursor: pointer;
-    border: 10px solid red;
-    color: red;
+    border: 10px solid black;
+    color: black;
 }
 
 #instruc::before {
@@ -115,7 +115,7 @@ body {
     left: 560px;
     right: 100%;
     bottom: 140px;
-    background: red;
+    background: black;
     transition: .4s;
     z-index: -1; 
 }
@@ -126,7 +126,7 @@ body {
 }
 
 #instruc:hover {
-    color: black;
+    color: white;
 }
 
 /* @font-face {

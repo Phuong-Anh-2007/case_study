@@ -1,7 +1,9 @@
 body {
     background-image: url(https://i.ytimg.com/vi/Pkni0V1aoic/maxresdefault.jpg);
     background-size: 100%;
-    color: yellow;
+    /* color: yellow; */
+    color: white;
+    /* color: rgb(145, 255, 0); */
 }
 
 .all {
@@ -10,7 +12,7 @@ body {
     border-radius: 30px;
     width: 50%;
     height: 625px;
-    margin-top: 0px;
+    margin-top: -25px;
     margin-left: 350px;
 }
 
@@ -27,8 +29,8 @@ body {
     font-size:30px;
     border-radius: 20px;
     cursor: pointer;
-    border:10px solid tomato;
-    color: tomato;
+    border:10px solid black;
+    color: black;
     text-align: center;
     margin-left: 175px;
     /* z-index: 2; */
@@ -38,11 +40,11 @@ body {
 #play::before {
     content: "";
     position: absolute;
-    top: 550px;
+    top: 530px;
     left: 100%;
     right: 530px;
-    bottom: -10px;
-    background: tomato;
+    bottom: 20px;
+    background: black;
     transition: .4s;
     z-index: -1; 
     /* z-index:  Position elements; */
@@ -51,16 +53,10 @@ body {
 
 #play:hover:before {
     left: 540px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 #play:hover {
-    color: black;
-    z-index: Non-positioned elements;
-}
-
-.pPlay {
-    /* z-index: 3; */
-    position: absolute;
-    line-height: 100px;
+    color: white;
+    /* z-index: Non-positioned elements; */
 }

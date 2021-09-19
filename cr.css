@@ -14,7 +14,7 @@
 
 body {
     background-size: 100%;
-    background-image: url(img/background.jpg);
+    background-image: url(img/backgroundInfor.jpg);
     display: flex;
     text-align: center;
     overflow: auto;
@@ -75,7 +75,7 @@ body {
     float: left;
     height: 100px;
     background-color: transparent;
-    border: 5px solid red;
+    border: 10px solid red;
     cursor: pointer;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
