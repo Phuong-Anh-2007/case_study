@@ -3,22 +3,13 @@ let pass = document.getElementById('pass');
 let flag = false;
 
 function signIn() {
-    email.value;
-    pass.value;
-
-    for (let i=0; i<localStorage.length; i++) {
-        if (localStorage[i] === email) {
-            flag = true;
-            break;
-        }
-    }
-
+    flag = localStorage.getItem('email') == email.value && localStorage.getItem('pass') == pass.value;
+    
     if (flag) {
-        console.log('Yes');
+        window.location='me.html';
     } else {
-        alert('This sign in information isn\'t signed up!! 😥');
+        alert('Your email or password was wtrong! 😥');
     } 
 
-    localStorage.setItem('email',toString(email.value));
-    console.log(localStorage.getItem('email'));
+
 }
