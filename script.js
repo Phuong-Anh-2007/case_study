@@ -18,8 +18,8 @@ function runBar() {
     }
 
 }
-runBar();
-// changeAll();
+// runBar();
+changeAll();
 
 function changeAll() {
     let elem = document.getElementById('change');
@@ -29,6 +29,8 @@ function changeAll() {
                     +'<div id="play" onclick="goToPlay()">PLAY</div>'
                     +'<br>'
                     +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
+                    +'<br>'
+                    +'<a href="signIn.html" target="_blank"><div id="signIn" class="signIn">SIGN IN</div> </a>'
                     +'</div>';
 }
 
