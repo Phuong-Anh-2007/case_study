@@ -5,3 +5,4 @@ function goToPlay() {
     clickSound.play();
     window.location='cr.html';
 }
+

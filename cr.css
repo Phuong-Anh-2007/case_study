@@ -191,3 +191,16 @@ body {
 input[type=radio] {
     cursor: pointer;
 }
+
+.instruc {
+    text-decoration: none;
+    background-color: rgba(220, 220, 220,0.75);
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    margin-left: -100px;
+    margin-top: -545px;
+    border-radius: 10px;
+}
