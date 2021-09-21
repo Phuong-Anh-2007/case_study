@@ -3,8 +3,8 @@ let pass = document.getElementById('pass');
 let flag = false;
 
 function signIn() {
-    console.log(email.value);
-    console.log(pass.value);
+    email.value;
+    pass.value;
 
     for (let i=0; i<localStorage.length; i++) {
         if (localStorage[i] === email) {
@@ -17,8 +17,8 @@ function signIn() {
         console.log('Yes');
     } else {
         alert('This sign in information isn\'t signed up!! 😥');
-    }
+    } 
 
-
-    
+    localStorage.setItem('email',toString(email.value));
+    console.log(localStorage.getItem('email'));
 }
