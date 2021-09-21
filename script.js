@@ -2,7 +2,9 @@ function runBar() {
     let elem= document.getElementById('runBar');
     let width=0;
     let id = setInterval(run,50);
-    let flag;
+    let clickSound = new Audio();
+
+    clickSound.src='sounds/click.mp3';
 
     function run() {
         if (width == 100) {
@@ -31,9 +33,11 @@ function changeAll() {
 }
 
 function goToPlay() {
+    clickSound.play()
     window.location='cr.html';
 }
 
 function goToInstruction() {
+    clickSound.play();
     window.location='instruction.html';
 }

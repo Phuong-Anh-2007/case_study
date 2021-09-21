@@ -71,7 +71,7 @@ function win(XO) {
     show.innerHTML='Congratulation '+XO+'!! You win'; 
 
     conti.innerHTML='Continue 😊';
-    conti.style.border= '10px solid blue';
+    conti.style.border= '10px solid lightblue';
 
 }
 
@@ -81,6 +81,5 @@ function tie() {
 }
 
 let gameBoard; 
-win('X')
-// reset();
+reset();
 checkMusic(true);
