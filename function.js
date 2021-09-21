@@ -1,4 +1,6 @@
 let clickSound = new Audio();
+let countWin = 0;
+let countTotal = 0;
 clickSound.src='sounds/click.mp3';
 
 
@@ -66,13 +68,22 @@ function conti() {
 
 //Win or tie
 function win(XO) {
+    
     let show = document.getElementById('win');
     let conti = document.getElementById('conti');
     show.innerHTML='Congratulation '+XO+'!! You win'; 
 
     conti.innerHTML='Continue 😊';
     conti.style.border= '10px solid lightblue';
-
+    
+    countWin++;
+    if (countWin % 2==0) {
+        localStorage.setItem('O',countO);
+        countTotal++;
+    } else {
+        localStorage.setItem('X',countX);
+        countTotal++;
+    }
 }
 
 function tie() {

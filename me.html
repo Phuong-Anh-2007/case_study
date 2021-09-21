@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    <div id="result" ></div>
 </body>
 </html>
+<script>
+    let elem = document.getElementById('result');
+
+    elem.innerHTML='Hello '+localStorage.getItem('username')
+                    +'This is your goal: '
+                    +'X: '+localStorage.getItem('X')
+                    +'<br>'
+                    +'O: '+localStorage.getItem('O')
+                    +'<a href="cr.html">Play</a>'
+    
+    // localStorage.clear();
+</script>

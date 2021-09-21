@@ -18,8 +18,8 @@ function runBar() {
     }
 
 }
-// runBar();
-changeAll();
+runBar();
+// changeAll();
 
 function changeAll() {
     let elem = document.getElementById('change');
