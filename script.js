@@ -30,7 +30,7 @@ function changeAll() {
                     +'<br>'
                     +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
                     +'<br>'
-                    +'<a href="signIn.html" target="_blank"><div id="signIn" class="signIn">SIGN IN</div> </a>'
+                    +'<a href="signIn__signUp/signIn.html" target="_blank"><div id="signIn" class="signIn">SIGN IN</div> </a>'
                     +'</div>';
 }
 
