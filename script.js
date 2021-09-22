@@ -1,3 +1,6 @@
+let clickSound = new Audio();
+clickSound.src='sounds/click.mp3';
+
 function runBar() {
     let elem= document.getElementById('runBar');
     let width=0;
@@ -30,16 +33,20 @@ function changeAll() {
                         +'<br>'
                         +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
                         +'<br>'
-                        +'<a href="signIn.html" target="_blank">'+'<div class="signIn">SIGN IN</div>'+'</a>'
+                        +'<a href="signIn.html" target="_blank">'+'<div class="signIn" onclick="goToSignIn">SIGN IN</div>'+'</a>'
                     +'</div>';
 }
 
 function goToPlay() {
-    clickSound.play()
+    clickSound.play();
     window.location='cr.html';
 }
 
 function goToInstruction() {
     clickSound.play();
     window.location='instruction.html';
+}
+
+function goToSignIn() {
+    clickSound.play();
 }
