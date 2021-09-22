@@ -24,13 +24,13 @@ runBar();
 function changeAll() {
     let elem = document.getElementById('change');
     elem.innerHTML='<div class="changed">'
-                    +'<b style="color:white">❌ CARO GAME ⭕</b>'
-                    +'<div><br></div>'
-                    +'<div id="play" onclick="goToPlay()">PLAY</div>'
-                    +'<br>'
-                    +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
-                    +'<br>'
-                    +'<a href="signIn.html" target="_blank"><div id="signIn" class="signIn">SIGN IN</div> </a>'
+                        +'<b style="color:white">❌ CARO GAME ⭕</b>'
+                        +'<div><br></div>'
+                        +'<div id="play" onclick="goToPlay()">PLAY</div>'
+                        +'<br>'
+                        +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
+                        +'<br>'
+                        +'<a href="signIn.html" target="_blank">'+'<div class="signIn">SIGN IN</div>'+'</a>'
                     +'</div>';
 }
 

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My account</title>
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="me.css">
 </head>
 <body>
     <div id="result" ></div>
@@ -13,14 +15,21 @@
 <script>
     let elem = document.getElementById('result');
 
-    elem.innerHTML='Hello '+localStorage.getItem('username')
-                    +'This is your goal: '
-                    +'X: <p id="goalX">'+localStorage.getItem('X')+'</p>'
+    elem.innerHTML='<h3> Hello '+localStorage.getItem('username')+'<h3>'
+                    +'<h3>This is your goal: </h3>'
+                    +'<table border="1">'
+                        +'<tr>'
+                            +'<td>❌</td>'
+                            +'<td>⭕</td>'
+                        +'</tr>'
+                        +'<tr>'
+                            +'<td id="goalX">'+localStorage.getItem('X')+'</td>'
+                            +'<td id="goalO">'+localStorage.getItem('O')+'</td>'
+                        +'</tr>'
+                    +'</table>'
                     +'<br>'
-                    +'O: <p id="goalO">'+localStorage.getItem('O')+'</p>'
-                    +'<br>'
-                    +'<a href="cr.html" target="_blank">Play</a>'
-
+                    +'<a href="cr.html" target="_blank"><div class="play">PLAY</div>'+'</a>';
+                    
     if (localStorage.getItem('X') == null && localStorage.getItem('O')==null) {
         document.getElementById('goalX').innerHTML=0;
         document.getElementById('goalO').innerHTML=0;

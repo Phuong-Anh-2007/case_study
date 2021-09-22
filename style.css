@@ -59,7 +59,7 @@ body {
     /* background-color: violet; */
     font-size: 50px;
     font-weight: bold;
-    
+    text-decoration: none;
 }
 
 #play {
@@ -130,8 +130,8 @@ body {
     color: white;
 }
 
-#signIn {
-    text-decoration: none;
+.signIn {
+    text-align: center;
     background-color: transparent;
     color: black;
     width: 250px;
@@ -142,9 +142,10 @@ body {
     line-height: 100px;
     cursor: pointer;
     font-size: 30px;
+    float: left;
 }
 
-#signIn::before {
+.signIn::before {
     content: "";
     position: absolute;
     top: 510px;
@@ -156,11 +157,11 @@ body {
     z-index: -1; 
 }
 
-#signIn:hover::before {
+.signIn:hover::before {
     right: 540px;
     border-radius: 20px;
 }
 
-#signIn:hover {
+.signIn:hover {
     color: white;
 }
