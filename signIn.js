@@ -14,6 +14,4 @@ function signIn() {
     } else {
         alert('Your email or password was wtrong! 😥');
     } 
-    
-
 }

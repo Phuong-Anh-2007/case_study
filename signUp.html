@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="signUp.css">
 </head>
 <body>
     <div class="all">
-        <h3>Sign up</h3>
-        <form action="me.html">
-            <!-- <div class="email"> -->
+        <div class="signUp">
+            <h3>Sign up</h3>
+            <form action="me.html" class="form">
+                <!-- <div class="email"> -->
+                <p>-Please don't use Vietnamese name </p>
+                <p>-Use "_" or "-" if you want to have spaces</p> 
                 <input type="text" name="email" id="nameDk" placeholder="Username" required>
-            <!-- </div> -->
-            <br> <br>
-            <!-- <div class="pass"> -->
+                <br><br>
+                <!-- </div> -->
+                <!-- <div class="pass"> -->
                 <input type="password" name="pass" id="pass" placeholder="Password" required>
-            <!-- </div> -->
-            <br> <br>
-            <!-- <div class="signIn"> -->
-                <button onclick="signUp()" type="submit" id="button">Sign up</button>
+                <!-- </div> -->
+                <br> <br>
+                <!-- <div class="signIn"> -->
+                <button onclick="signUp()" type="submit" id="button">✔</button>
 
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 </html>

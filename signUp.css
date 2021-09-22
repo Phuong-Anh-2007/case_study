@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+    background-image: url(img/backgroundSignUp.png);
+    
+}
+
+.signUp {
+    background-color: rgba(220, 220, 220,0.8);
+    width: 500px;
+    /* font-size: 30px; */
+    height: 380px;
+    border-radius: 20px;
+    margin-top: 90px;
+    margin-left: 400px;
+    float: left;
+    line-height: 100%;
+}
+
+#nameDk, #pass {
+    font-size: 30px;
+    /* border-radius: 5px; */
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+}
+
+h3 {
+    font-size: 50px;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+}
+
+#button {
+    font-size: 30px;
+    background-color: rgb(204, 173, 211);
+    border-radius: 5px;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    width: 50px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: rgb(190, 133, 202);
+}
+
+
+h5 {
+    text-align: center;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    font-weight: bold;
+}
