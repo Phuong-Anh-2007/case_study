@@ -5,10 +5,7 @@ function runBar() {
     let elem= document.getElementById('runBar');
     let width=0;
     let id = setInterval(run,50);
-    let clickSound = new Audio();
-
-    clickSound.src='sounds/click.mp3';
-
+    
     function run() {
         if (width == 100) {
             clearInterval(id);
