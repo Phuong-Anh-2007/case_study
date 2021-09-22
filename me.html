@@ -15,10 +15,16 @@
 
     elem.innerHTML='Hello '+localStorage.getItem('username')
                     +'This is your goal: '
-                    +'X: '+localStorage.getItem('X')
+                    +'X: <p id="goalX">'+localStorage.getItem('X')+'</p>'
                     +'<br>'
-                    +'O: '+localStorage.getItem('O')
+                    +'O: <p id="goalO">'+localStorage.getItem('O')+'</p>'
+                    +'<br>'
                     +'<a href="cr.html">Play</a>'
+
+    if (localStorage.getItem('X') == null && localStorage.getItem('O')==null) {
+        document.getElementById('goalX').innerHTML=0;
+        document.getElementById('goalO').innerHTML=0;
+    }
     
     // localStorage.clear();
 </script>
