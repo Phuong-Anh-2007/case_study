@@ -1,5 +1,3 @@
-let clickSound = new Audio();
-clickSound.src='sounds/click.mp3';
 
 function runBar() {
     let elem= document.getElementById('runBar');
@@ -9,7 +7,8 @@ function runBar() {
     function run() {
         if (width == 100) {
             clearInterval(id);
-            changeAll();
+            // changeAll();
+            window.location='indexChange.html';
         } else {
             width++;
             elem.style.width=width+'%';
@@ -21,29 +20,3 @@ function runBar() {
 runBar();
 // changeAll();
 
-function changeAll() {
-    let elem = document.getElementById('change');
-    elem.innerHTML='<div class="changed">'
-                        +'<b style="color:white">❌ CARO GAME ⭕</b>'
-                        +'<div><br></div>'
-                        +'<div id="play" onclick="goToPlay()">PLAY</div>'
-                        +'<br>'
-                        +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
-                        +'<br>'
-                        +'<a href="signIn.html" target="_blank">'+'<div class="signIn" onclick="goToSignIn">SIGN IN</div>'+'</a>'
-                    +'</div>';
-}
-
-function goToPlay() {
-    clickSound.play();
-    window.location='cr.html';
-}
-
-function goToInstruction() {
-    clickSound.play();
-    window.location='instruction.html';
-}
-
-function goToSignIn() {
-    clickSound.play();
-}

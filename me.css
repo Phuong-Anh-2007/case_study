@@ -47,7 +47,7 @@ table{
     top: 525px;
     left: 535px;
     right: 100%;
-    bottom: 10px;
+    bottom: 11px;
     background: black;
     transition: .4s;
     z-index: -1; 

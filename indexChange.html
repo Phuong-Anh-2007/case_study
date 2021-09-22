@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="indexChange.css">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="change"></div>
+</body>
+</html>
+<script>
+    let clickSound = new Audio();
+    clickSound.src='sounds/click.mp3';
+
+    function changeAll() {
+    let elem = document.getElementById('change');
+    elem.innerHTML='<div class="changed">'
+                        +'<b style="color:white">❌ CARO GAME ⭕</b>'
+                        +'<div><br></div>'
+                        +'<div id="play" onclick="goToPlay()">PLAY</div>'
+                        +'<br>'
+                        +'<div id="instruc" onclick="goToInstruction()">INSTRUCTION</div>'
+                        +'<br>'
+                        +'<a href="signIn.html" target="_blank">'+'<div class="signIn" onclick="goToSignIn">SIGN IN</div>'+'</a>'
+                    +'</div>';
+}
+
+function goToPlay() {
+    clickSound.play();
+    window.location='cr.html';
+}
+
+function goToInstruction() {
+    clickSound.play();
+    window.location='instruction.html';
+}
+
+function goToSignIn() {
+    clickSound.play();
+}
+
+changeAll();
+</script>
