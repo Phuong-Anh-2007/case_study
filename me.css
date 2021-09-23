@@ -9,11 +9,19 @@ body{
 table{
     margin-left: auto;
     margin-right: auto;
-    border: 10px solid white;
+    /* border: 10px solid white; */
     border-collapse: collapse;
     width: 500px;
     height: 300px;
     font-size: 50px;
+}
+
+#X, #goalX {
+    border-right: 5px solid white;
+}
+
+#X, #O{
+    border-bottom: 5px solid white;
 }
 
 #result{

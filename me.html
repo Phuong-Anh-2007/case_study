@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="me.css">
 </head>
 <body>
-    <div id="result" ></div>
+    <div id="result"></div>
 </body>
 </html>
 <script>
@@ -18,9 +18,9 @@
     elem.innerHTML='<h3> Hello '+localStorage.getItem('username')+'<h3>'
                     +'<h3>This is your goal: </h3>'
                     +'<table>'
-                        +'<tr>'
-                            +'<td>❌</td>'
-                            +'<td>⭕</td>'
+                        +'<tr >'
+                            +'<td id="X">❌</td>'
+                            +'<td id="O">⭕</td>'
                         +'</tr>'
                         +'<tr>'
                             +'<td id="goalX">'+localStorage.getItem('X')+'</td>'
