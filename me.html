@@ -28,7 +28,8 @@
                         +'</tr>'
                     +'</table>'
                     +'<br>'
-                    +'<a href="cr.html" target="_blank"><div class="play">PLAY</div>'+'</a>';
+                    +'<a href="cr.html" target="_blank"><div class="play">PLAY</div>'+'</a>'
+                    +'<div class="update" onclick="update()">🔁</div>';
                     
     if (localStorage.getItem('X') == null && localStorage.getItem('O')==null) {
         document.getElementById('goalX').innerHTML=0;
@@ -40,4 +41,9 @@
     }
     
     // localStorage.clear();
+    function update() {
+        document.getElementById('goalX').innerHTML=localStorage.getItem('X');
+        document.getElementById('goalO').innerHTML=localStorage.getItem('O');
+    }
+
 </script>

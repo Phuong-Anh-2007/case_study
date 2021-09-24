@@ -74,6 +74,21 @@ table{
     color: black;
 }
 
+.update {
+    width: 250px;
+    float: left;
+    height: 100px;
+    margin-top: -520px;
+    margin-left: -125px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 
 /*Chrome*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
