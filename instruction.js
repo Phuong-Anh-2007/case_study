@@ -11,3 +11,4 @@ function goToSignIn() {
     window.location='signIn.html';
 }
 
+

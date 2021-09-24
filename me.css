@@ -62,8 +62,8 @@ table{
 }
 
 .play:hover::before{
-    right: 565px;
-    border-radius: 20px;
+    right: 555px;
+    border-radius: 10px;
 }
 
 .play:hover{
@@ -72,4 +72,20 @@ table{
 
 #goalX, #goalO {
     color: black;
+}
+
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .play::before{
+        content: "";
+        position: absolute;
+        top: 530px;
+        left: 535px;
+        right: 100%;
+        bottom: -11px;
+        background: black;
+        transition: .4s;
+        z-index: -1; 
+    }
 }
