@@ -19,4 +19,3 @@ function runBar() {
 }
 runBar();
 // changeAll();
-

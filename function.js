@@ -1,6 +1,7 @@
 let clickSound = new Audio();
 let countWin = 0;
 let countTotal = 0;
+let clickWin = false;
 clickSound.src='sounds/click.mp3';
 
 
@@ -14,7 +15,7 @@ function reset() {
         clickSound.play();      
     }
           
-    
+    clickWin = false;
     let X = document.getElementById('XX');
     let O = document.getElementById('OO');
     countX = 0;
@@ -38,11 +39,22 @@ function reset() {
 
 //Change color of cell
 function changeColorCellInp(x,y) {
-    document.getElementById('cell_'+x + ',' +y+'').style.backgroundColor='rgba(255,240,245,0.75)';
+    let cell  = document.getElementById('cell_'+x + ',' +y+'');
+    cell.style.backgroundColor='rgba(255,240,245,0.75)';
+    if (clickWin) {
+        cell.style.cursor='default'; 
+        cell.style.backgroundColor='transparent';
+    }
 }
 
 function changeColorCellOut(x,y) {
-    document.getElementById('cell_'+x + ',' +y+'').style.backgroundColor='transparent';
+    let cell  = document.getElementById('cell_'+x + ',' +y+'');
+    cell.style.backgroundColor='transparent';
+    if (clickWin) {
+        cell.style.cursor='default'; 
+        cell.style.backgroundColor='transparent';
+    }
+    
 }
 
 //Continue button
@@ -51,6 +63,7 @@ function conti() {
         clickSound.play();      
     }
 
+    clickWin = false;
     let X = document.getElementById('XX');
     // let O = document.getElementById('OO');
     gameBoard = new GameBoard(ROWS, COLS, "caro");
@@ -69,6 +82,7 @@ function conti() {
 //Win or tie
 function win(XO) {
     
+    clickWin = true;
     let show = document.getElementById('win');
     let conti = document.getElementById('conti');
     show.innerHTML='Congratulation '+XO+'!! You win'; 
